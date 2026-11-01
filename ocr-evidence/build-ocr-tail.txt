@@ -1,0 +1,687 @@
+urces\build-libpng\Release\libpng16_static.lib
+  Building Custom Rule D:/a/_temp/ocr-from-sources/src-libpng/libpng-1.6.44/CMakeLists.txt
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/libpng16_static.lib
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/png.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/pngconf.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/pnglibconf.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/libpng16/png.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/libpng16/pngconf.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/libpng16/pnglibconf.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/man/man3/libpng.3
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/man/man3/libpngpf.3
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/man/man5/png.5
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/libpng/libpng16.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/libpng/libpng16-release.cmake
+-- Up-to-date: D:/a/_temp/ocr-from-sources/prefix/lib/libpng16_static.lib
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/PNG/PNGTargets.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/PNG/PNGTargets-release.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/PNG/PNGConfig.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/PNG/PNGConfigVersion.cmake
+CMake Deprecation Warning at CMakeLists.txt:11 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.20348.
+-- The C compiler identification is MSVC 19.44.35229.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found ZLIB: D:\a\_temp\ocr-from-sources\prefix\lib\zlibstatic.lib (found version "1.3.1")
+-- Found PNG: D:\a\_temp\ocr-from-sources\prefix\lib\libpng16_static.lib (found version "1.6.44")
+-- Looking for sin in m
+-- Looking for sin in m - not found
+-- Setting build type to 'Release' as none was specified.
+-- Looking for include file dlfcn.h
+-- Looking for include file dlfcn.h - not found
+-- Looking for include file inttypes.h
+-- Looking for include file inttypes.h - found
+-- Looking for include file memory.h
+-- Looking for include file memory.h - found
+-- Looking for include file stdint.h
+-- Looking for include file stdint.h - found
+-- Looking for include file stdlib.h
+-- Looking for include file stdlib.h - found
+-- Looking for include file strings.h
+-- Looking for include file strings.h - not found
+-- Looking for include file string.h
+-- Looking for include file string.h - found
+-- Looking for include file sys/stat.h
+-- Looking for include file sys/stat.h - found
+-- Looking for include file sys/types.h
+-- Looking for include file sys/types.h - found
+-- Looking for include file unistd.h
+-- Looking for include file unistd.h - not found
+-- Looking for fmemopen
+-- Looking for fmemopen - not found
+-- Looking for fstatat
+-- Looking for fstatat - not found
+-- 
+-- General configuration for Leptonica 
+-- --------------------------------------------------------
+-- Build type: Release
+-- Compiler: MSVC
+-- C compiler options:
+   /DWIN32 /D_WINDOWS /W3 /MP
+-- Linker options: /machine:x64
+  
+-- Install directory: D:/a/_temp/ocr-from-sources/prefix
+-- 
+-- Build with sw [SW_BUILD]: OFF
+-- Build utility programs [BUILD_PROG]: OFF
+-- Used ZLIB library: D:\a\_temp\ocr-from-sources\prefix\lib\zlibstatic.lib
+-- Used PNG library:  D:\a\_temp\ocr-from-sources\prefix\lib\libpng16_static.lib;D:\a\_temp\ocr-from-sources\prefix\lib\zlibstatic.lib
+-- Used JPEG library: 
+-- Used OpenJPEG library: 
+-- Used TIFF library: 
+-- Used GIF library:  
+-- Used WebP library: 
+-- --------------------------------------------------------
+-- 
+-- Configuring done (9.6s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_POLICY_VERSION_MINIMUM
+
+
+-- Build files have been written to: D:/a/_temp/ocr-from-sources/build-leptonica
+MSBuild version 17.14.60+43b635718 for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule D:/a/_temp/ocr-from-sources/src-leptonica/leptonica-1.85.0/src/CMakeLists.txt
+  adaptmap.c
+  affine.c
+  affinecompose.c
+  arrayaccess.c
+  bardecode.c
+  baseline.c
+  bbuffer.c
+  bilateral.c
+  bilinear.c
+  binarize.c
+  binexpand.c
+  binreduce.c
+  blend.c
+  bmf.c
+  bmpio.c
+  bmpiostub.c
+  bootnumgen1.c
+  bootnumgen2.c
+  bootnumgen3.c
+  bootnumgen4.c
+  boxbasic.c
+  boxfunc1.c
+  boxfunc2.c
+  boxfunc3.c
+  boxfunc4.c
+  boxfunc5.c
+  bytearray.c
+  ccbord.c
+  ccthin.c
+  checkerboard.c
+  classapp.c
+  colorcontent.c
+  colorfill.c
+  coloring.c
+  colormap.c
+  colormorph.c
+  colorquant1.c
+  colorquant2.c
+  colorseg.c
+  colorspace.c
+  compare.c
+  conncomp.c
+  convertfiles.c
+  convolve.c
+  correlscore.c
+  dewarp1.c
+  dewarp2.c
+  dewarp3.c
+  dewarp4.c
+  dnabasic.c
+  dnafunc1.c
+  dnahash.c
+  dwacomb.2.c
+  dwacomblow.2.c
+  edge.c
+  encoding.c
+  enhance.c
+  fhmtauto.c
+  fhmtgen.1.c
+  fhmtgenlow.1.c
+  finditalic.c
+  flipdetect.c
+  fmorphauto.c
+  fmorphgen.1.c
+  fmorphgenlow.1.c
+  fpix1.c
+  fpix2.c
+  gifio.c
+  gifiostub.c
+  gplot.c
+  graphics.c
+  graymorph.c
+  grayquant.c
+  hashmap.c
+  heap.c
+  jbclass.c
+  jp2kheader.c
+  jp2kheaderstub.c
+  jp2kio.c
+  jp2kiostub.c
+  jpegio.c
+  jpegiostub.c
+  kernel.c
+  leptwin.c
+  libversions.c
+  list.c
+  map.c
+  maze.c
+  morph.c
+  morphapp.c
+  morphdwa.c
+  morphseq.c
+  numabasic.c
+  numafunc1.c
+  numafunc2.c
+  pageseg.c
+  paintcmap.c
+  parseprotos.c
+  partify.c
+  partition.c
+  pdfapp.c
+  pdfappstub.c
+  pdfio1.c
+  pdfio1stub.c
+  pdfio2.c
+  pdfio2stub.c
+  pix1.c
+  pix2.c
+  pix3.c
+  pix4.c
+  pix5.c
+  pixabasic.c
+  pixacc.c
+  pixafunc1.c
+  pixafunc2.c
+  pixalloc.c
+  pixarith.c
+  pixcomp.c
+  pixconv.c
+  pixlabel.c
+  pixtiling.c
+  pngio.c
+  pngiostub.c
+  pnmio.c
+  pnmiostub.c
+  projective.c
+  psio1.c
+  psio1stub.c
+  psio2.c
+  psio2stub.c
+  ptabasic.c
+  ptafunc1.c
+  ptafunc2.c
+  ptra.c
+  quadtree.c
+  queue.c
+  rank.c
+  rbtree.c
+  readbarcode.c
+  readfile.c
+  recogbasic.c
+  recogdid.c
+  recogident.c
+  recogtrain.c
+  regutils.c
+  renderpdf.c
+  rop.c
+  roplow.c
+  rotate.c
+  rotateam.c
+  rotateorth.c
+  rotateshear.c
+  runlength.c
+  sarray1.c
+  sarray2.c
+  scale1.c
+  scale2.c
+  seedfill.c
+  sel1.c
+  sel2.c
+  selgen.c
+  shear.c
+  skew.c
+  spixio.c
+  stack.c
+  stringcode.c
+  strokes.c
+  sudoku.c
+  textops.c
+  tiffio.c
+  tiffiostub.c
+  utils1.c
+  utils2.c
+  warper.c
+  watershed.c
+  webpanimio.c
+  webpanimiostub.c
+  webpio.c
+  webpiostub.c
+  writefile.c
+  zlibmem.c
+  zlibmemstub.c
+  leptonica.vcxproj -> D:\a\_temp\ocr-from-sources\build-leptonica\src\Release\leptonica-1.85.0.lib
+  Building Custom Rule D:/a/_temp/ocr-from-sources/src-leptonica/leptonica-1.85.0/CMakeLists.txt
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/pkgconfig/lept_Release.pc
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/leptonica/LeptonicaConfig.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/leptonica/LeptonicaConfig-version.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/leptonica-1.85.0.lib
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/leptonica/LeptonicaTargets.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/leptonica/LeptonicaTargets-release.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/allheaders.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/alltypes.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/array.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/array_internal.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/arrayaccess.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/bbuffer.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/bilateral.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/bmf.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/bmfdata.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/bmp.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/ccbord.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/ccbord_internal.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/colorfill.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/dewarp.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/environ.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/gplot.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/hashmap.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/heap.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/imageio.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/jbclass.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/leptwin.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/list.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/morph.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/pix.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/pix_internal.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/ptra.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/queue.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/rbtree.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/readbarcode.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/recog.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/regutils.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/stack.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/stringcode.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/sudoku.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/watershed.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/leptonica/endianness.h
+-- Setting policy CMP0091 to NEW
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.20348.
+-- The C compiler identification is MSVC 19.44.35229.0
+-- The CXX compiler identification is MSVC 19.44.35229.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring tesseract version 5.5.0...
+-- Setting build type to 'Release' as none was specified.
+-- IPO / LTO supported
+-- CMAKE_SYSTEM_PROCESSOR=<AMD64>
+-- Building with static CRT.
+-- Found leptonica version: 1.85.0
+Leptonica was build without TIFF support! Disabling TIFF support...
+-- TIFF support disabled.
+-- LibArchive support disabled.
+-- CURL support disabled.
+ScrollView debugging disabled.
+-- Looking for feenableexcept
+-- Looking for feenableexcept - not found
+-- 
+-- General configuration for Tesseract 5.5.0
+-- --------------------------------------------------------
+-- Build type: Release 64 bits
+-- Compiler: MSVC
+-- Used standard: C++20
+-- CXX compiler options: /DWIN32 /D_WINDOWS /W3 /GR /EHsc /utf-8 /MP /O2 /Ob2 /DNDEBUG /wd4244 /wd4305 /wd4267 /wd4251 /wd4275 /wd4005 /wd4068
+-- Compile definitions = HAVE_AVX;HAVE_AVX2;HAVE_AVX512F;HAVE_FMA;HAVE_SSE4_1;OPENMP_SIMD;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_BUILD;HAVE_CONFIG_H
+-- Linker options: /machine:x64 
+-- Install directory: D:/a/_temp/ocr-from-sources/prefix
+-- HAVE_AVX: ON
+-- HAVE_AVX2: ON
+-- HAVE_AVX512F: ON
+-- HAVE_FMA: ON
+-- HAVE_SSE4_1: ON
+-- MARCH_NATIVE_OPT: OFF
+-- HAVE_NEON: FALSE
+-- Link-time optimization: FALSE
+-- --------------------------------------------------------
+-- Build with sw [SW_BUILD]: OFF
+-- Build with openmp support [OPENMP_BUILD]: OFF
+-- Build with libarchive support [HAVE_LIBARCHIVE]: OFF
+-- Build with libcurl support [HAVE_LIBCURL]: OFF
+-- Enable float for LSTM [FAST_FLOAT]: ON
+-- Enable optimization for host CPU (could break HW compatibility) [ENABLE_NATIVE]: OFF
+-- Disable disable graphics (ScrollView) [GRAPHICS_DISABLED]: ON
+-- Disable the legacy OCR engine [DISABLED_LEGACY_ENGINE]: OFF
+-- Build training tools [BUILD_TRAINING_TOOLS]: OFF
+-- Build tests [BUILD_TESTS]: OFF
+-- Use system ICU Library [USE_SYSTEM_ICU]: OFF
+-- Install tesseract configs [INSTALL_CONFIGS]: ON
+-- --------------------------------------------------------
+-- 
+-- Configuring done (10.1s)
+-- Generating done (0.1s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_POLICY_VERSION_MINIMUM
+    ZLIB_INCLUDE_DIR
+    ZLIB_LIBRARY
+
+
+-- Build files have been written to: D:/a/_temp/ocr-from-sources/build-tesseract
+MSBuild version 17.14.60+43b635718 for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule D:/a/_temp/ocr-from-sources/src-tesseract/tesseract-5.5.0/CMakeLists.txt
+  adaptions.cpp
+  applybox.cpp
+  control.cpp
+  docqual.cpp
+  equationdetect.cpp
+  fixspace.cpp
+  fixxht.cpp
+  linerec.cpp
+  ltrresultiterator.cpp
+  mutableiterator.cpp
+  osdetect.cpp
+  output.cpp
+  pageiterator.cpp
+  pagesegmain.cpp
+  pagewalk.cpp
+  par_control.cpp
+  paragraphs.cpp
+  paramsd.cpp
+  pgedit.cpp
+  recogtraining.cpp
+  reject.cpp
+  resultiterator.cpp
+  superscript.cpp
+  tessbox.cpp
+  tessedit.cpp
+  tesseractclass.cpp
+  tessvars.cpp
+  tfacepp.cpp
+  thresholder.cpp
+  werdit.cpp
+  blamer.cpp
+  blobbox.cpp
+  blobs.cpp
+  blread.cpp
+  boxread.cpp
+  boxword.cpp
+  ccstruct.cpp
+  coutln.cpp
+  detlinefit.cpp
+  dppoint.cpp
+  fontinfo.cpp
+  image.cpp
+  imagedata.cpp
+  linlsq.cpp
+  matrix.cpp
+  mod128.cpp
+  normalis.cpp
+  ocrblock.cpp
+  ocrpara.cpp
+  ocrrow.cpp
+  otsuthr.cpp
+  pageres.cpp
+  params_training_featdef.cpp
+  pdblock.cpp
+  points.cpp
+  polyaprx.cpp
+  polyblk.cpp
+  quadlsq.cpp
+  quspline.cpp
+  ratngs.cpp
+  rect.cpp
+  rejctmap.cpp
+  seam.cpp
+  split.cpp
+  statistc.cpp
+  stepblob.cpp
+  werd.cpp
+  ambigs.cpp
+  bitvector.cpp
+  ccutil.cpp
+  clst.cpp
+  elst.cpp
+  elst2.cpp
+  errcode.cpp
+  indexmapbidi.cpp
+  params.cpp
+  scanutils.cpp
+D:\a\_temp\ocr-from-sources\src-tesseract\tesseract-5.5.0\src\ccutil\scanutils.cpp(137,18): warning C4146: unary minus operator applied to unsigned type, result still unsigned [D:\a\_temp\ocr-from-sources\build-tesseract\libtesseract.vcxproj]
+  serialis.cpp
+  tessdatamanager.cpp
+  tprintf.cpp
+  unichar.cpp
+  unicharcompress.cpp
+  unicharmap.cpp
+  unicharset.cpp
+  adaptive.cpp
+  adaptmatch.cpp
+  blobclass.cpp
+  classify.cpp
+  cluster.cpp
+D:\a\_temp\ocr-from-sources\src-tesseract\tesseract-5.5.0\src\classify\cluster.cpp(2044,28): warning C4018: '<': signed/unsigned mismatch [D:\a\_temp\ocr-from-sources\build-tesseract\libtesseract.vcxproj]
+D:\a\_temp\ocr-from-sources\src-tesseract\tesseract-5.5.0\src\classify\cluster.cpp(3244,32): warning C4805: '==': unsafe mix of type '_Ty' and type 'bool' in operation [D:\a\_temp\ocr-from-sources\build-tesseract\libtesseract.vcxproj]
+D:\a\_temp\ocr-from-sources\src-tesseract\tesseract-5.5.0\src\classify\cluster.cpp(3244,32): warning C4805:         with [D:\a\_temp\ocr-from-sources\build-tesseract\libtesseract.vcxproj]
+D:\a\_temp\ocr-from-sources\src-tesseract\tesseract-5.5.0\src\classify\cluster.cpp(3244,32): warning C4805:         [ [D:\a\_temp\ocr-from-sources\build-tesseract\libtesseract.vcxproj]
+D:\a\_temp\ocr-from-sources\src-tesseract\tesseract-5.5.0\src\classify\cluster.cpp(3244,32): warning C4805:             _Ty=uint8_t [D:\a\_temp\ocr-from-sources\build-tesseract\libtesseract.vcxproj]
+D:\a\_temp\ocr-from-sources\src-tesseract\tesseract-5.5.0\src\classify\cluster.cpp(3244,32): warning C4805:         ] [D:\a\_temp\ocr-from-sources\build-tesseract\libtesseract.vcxproj]
+  clusttool.cpp
+  cutoffs.cpp
+  featdefs.cpp
+  float2int.cpp
+  fpoint.cpp
+  intfeaturespace.cpp
+  intfx.cpp
+  intmatcher.cpp
+  intproto.cpp
+  kdtree.cpp
+  mf.cpp
+  mfoutline.cpp
+  mfx.cpp
+  normfeat.cpp
+  normmatch.cpp
+  ocrfeatures.cpp
+  outfeat.cpp
+  picofeat.cpp
+  protos.cpp
+  shapeclassifier.cpp
+  shapetable.cpp
+  tessclassifier.cpp
+  trainingsample.cpp
+  oldlist.cpp
+  context.cpp
+  dawg.cpp
+  dawg_cache.cpp
+  dict.cpp
+  hyphen.cpp
+  permdawg.cpp
+  stopper.cpp
+  trie.cpp
+  convolve.cpp
+  fullyconnected.cpp
+  functions.cpp
+  input.cpp
+  lstm.cpp
+  lstmrecognizer.cpp
+  maxpool.cpp
+  network.cpp
+  networkio.cpp
+  parallel.cpp
+  plumbing.cpp
+  recodebeam.cpp
+  reconfig.cpp
+  reversed.cpp
+  series.cpp
+  stridemap.cpp
+  weightmatrix.cpp
+  alignedblob.cpp
+  baselinedetect.cpp
+  bbgrid.cpp
+  blkocc.cpp
+  blobgrid.cpp
+  ccnontextdetect.cpp
+  cjkpitch.cpp
+  colfind.cpp
+  colpartition.cpp
+  colpartitiongrid.cpp
+  colpartitionset.cpp
+  devanagari_processing.cpp
+  drawtord.cpp
+  edgblob.cpp
+  edgloop.cpp
+  equationdetectbase.cpp
+  fpchop.cpp
+  gap_map.cpp
+  imagefind.cpp
+  linefind.cpp
+  makerow.cpp
+  oldbasel.cpp
+  pithsync.cpp
+  pitsync1.cpp
+  scanedg.cpp
+  sortflts.cpp
+  strokewidth.cpp
+  tabfind.cpp
+  tablefind.cpp
+  tablerecog.cpp
+  tabvector.cpp
+  textlineprojection.cpp
+  textord.cpp
+  topitch.cpp
+  tordmain.cpp
+  tospace.cpp
+  tovars.cpp
+  underlin.cpp
+  wordseg.cpp
+  workingpartset.cpp
+  scrollview.cpp
+  svmnode.cpp
+  svutil.cpp
+  associate.cpp
+  chop.cpp
+  chopper.cpp
+  drawfx.cpp
+  findseam.cpp
+  gradechop.cpp
+  language_model.cpp
+  lm_consistency.cpp
+  lm_pain_points.cpp
+  lm_state.cpp
+  outlines.cpp
+  params_model.cpp
+  pieces.cpp
+  plotedges.cpp
+  render.cpp
+  segsearch.cpp
+  tface.cpp
+  wordclass.cpp
+  wordrec.cpp
+  baseapi.cpp
+  capi.cpp
+  renderer.cpp
+  altorenderer.cpp
+  pagerenderer.cpp
+  hocrrenderer.cpp
+  lstmboxrenderer.cpp
+  pdfrenderer.cpp
+  wordstrboxrenderer.cpp
+  simddetect.cpp
+  intsimdmatrix.cpp
+  dotproduct.cpp
+D:\a\_temp\ocr-from-sources\src-tesseract\tesseract-5.5.0\src\arch\dotproduct.cpp(25,28): warning C4849: OpenMP 'reduction' clause ignored in 'simd' directive [D:\a\_temp\ocr-from-sources\build-tesseract\libtesseract.vcxproj]
+  dotproductavx.cpp
+  intsimdmatrixavx2.cpp
+  dotproductavx512.cpp
+  dotproductfma.cpp
+  dotproductsse.cpp
+  intsimdmatrixsse.cpp
+  libtesseract.vcxproj -> D:\a\_temp\ocr-from-sources\build-tesseract\Release\tesseract55.lib
+  Building Custom Rule D:/a/_temp/ocr-from-sources/src-tesseract/tesseract-5.5.0/CMakeLists.txt
+  tesseract.cpp
+D:\a\_temp\ocr-from-sources\src-tesseract\tesseract-5.5.0\src\tesseract.cpp(447,41): warning C4101: 'e': unreferenced local variable [D:\a\_temp\ocr-from-sources\build-tesseract\tesseract.vcxproj]
+  tesseract.vcxproj -> D:\a\_temp\ocr-from-sources\build-tesseract\bin\Release\tesseract.exe
+  Building Custom Rule D:/a/_temp/ocr-from-sources/src-tesseract/tesseract-5.5.0/CMakeLists.txt
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/pkgconfig/tesseract.pc
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/bin/tesseract.exe
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/tesseract55.lib
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/tesseract/TesseractTargets.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/tesseract/TesseractTargets-release.cmake
+-- Up-to-date: D:/a/_temp/ocr-from-sources/prefix/lib/cmake
+-- Up-to-date: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/tesseract
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/tesseract/TesseractConfig.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/lib/cmake/tesseract/TesseractConfigVersion.cmake
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/baseapi.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/capi.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/renderer.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/version.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/ltrresultiterator.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/pageiterator.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/resultiterator.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/osdetect.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/publictypes.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/ocrclass.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/export.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/include/tesseract/unichar.h
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/alto
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/ambigs.train
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/api_config
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/bazaar
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/bigram
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/box.train
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/box.train.stderr
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/digits
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/get.images
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/hocr
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/inter
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/kannada
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/linebox
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/logfile
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/lstm.train
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/lstmbox
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/lstmdebug
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/makebox
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/page
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/pdf
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/quiet
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/rebox
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/strokewidth
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/tsv
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/txt
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/unlv
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/configs/wordstrbox
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/tessconfigs/batch
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/tessconfigs/batch.nochop
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/tessconfigs/matdemo
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/tessconfigs/msdemo
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/tessconfigs/nobatch
+-- Installing: D:/a/_temp/ocr-from-sources/prefix/share/tessdata/tessconfigs/segdemo
+Runtime revisado: D:\a\_temp\ocr-from-sources\runtime
