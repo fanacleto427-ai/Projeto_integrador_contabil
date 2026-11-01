@@ -13,9 +13,10 @@ A candidata continua **não homologada**; empacotar não corrige a precisão ban
    É necessária internet: o comando instala as dependências de
    `requirements.txt` e PyInstaller no Python selecionado. Não precisa instalar
    PyInstaller manualmente. Não desative o antivírus.
-   Antes, o responsável pela geração deve preparar o runtime OCR revisado
-   descrito em [OCR_REDISTRIBUICAO.md](OCR_REDISTRIBUICAO.md). Sem esse runtime
-   o gerador bloqueia a distribuição, em vez de emitir um pacote sem OCR.
+   Antes, o responsável pela geração deve compilar o runtime com
+   `windows/build_ocr.py` ou fornecer um runtime OCR revisado, como descrito em
+   [OCR_REDISTRIBUICAO.md](OCR_REDISTRIBUICAO.md). Sem esse runtime o gerador
+   bloqueia a distribuição. O GitHub Actions faz a preparação automaticamente.
 4. Aguarde a mensagem de conclusão. Em caso de falha, leia o erro na janela;
    uma saída de geração anterior não confirma o sucesso da tentativa atual.
 5. O arquivo para levar a outro computador estará em:
@@ -40,8 +41,8 @@ O gerador inclui o runtime revisado em `_internal/ocr`, com o idioma português
 (`por`), suas DLLs, inventário de origem, licenças e avisos. O usuário final não
 precisa instalar OCR ou Python nem configurar caminhos.
 
-**Ainda não há runtime aprovado ou compilação Windows realizada neste ambiente.**
-Preparar os componentes e executar a prova em Windows limpo continuam obrigatórios;
+**Os scripts não comprovam sozinhos uma compilação Windows.**
+São obrigatórios os relatórios da geração e da prova em outra máquina;
 ver [OCR_REDISTRIBUICAO.md](OCR_REDISTRIBUICAO.md).
 
 Na inicialização, `TESSERACT_CMD` explícito prevalece; sem ele, usa o OCR
@@ -52,19 +53,27 @@ leitores de texto nativo continuam disponíveis.
 
 ## Alternativa: geração pelo GitHub Actions
 
-Há um exemplo em `windows/build-windows.yml`, mas ele **não está ativado**
-e nenhuma execução remota foi realizada neste ambiente.
-Esse exemplo só funciona após disponibilizar um runtime revisado na pasta
-`windows/ocr-runtime` do kit (ou `importador_dominio/windows/ocr-runtime`
-no repositório completo). Ele não prepara esse componente nem suas licenças.
+O workflow está em `.github/workflows/build-windows.yml` no repositório
+completo, com uma cópia para kits isolados em `windows/build-windows.yml`.
+Ele prepara o OCR dos fontes com versões/hashes fixos e inclui as licenças;
+não exige montagem manual de uma pasta de DLLs.
 
 Para usar essa alternativa, coloque os fontes do kit num repositório seu
 (preferencialmente privado, **sem PDFs ou dados bancários**) e copie o exemplo
 para `.github/workflows/build-windows.yml` na raiz do repositório.
 O exemplo aceita `app.py` na raiz ou dentro de `importador_dominio/`.
 Na aba Actions, execute manualmente **Gerar Importador Dominio Windows**.
+Um envio à branch `agent/windows-ocr` também inicia essa execução.
 Após sucesso, baixe o artefato `ImportadorDominio-Windows-candidata`;
-ele contém o ZIP da distribuição e seu SHA-256.
+ele contém o ZIP da distribuição, seu SHA-256 e os relatórios. Esse artefato
+final só é disponibilizado se a prova em outra VM Windows passar.
+
+São três etapas: compilar/empacotar, verificar o ZIP em outra VM sem configurar
+Python ou OCR e registrar os resultados. Apenas a etapa de registrar evidências
+tem permissão de escrita, limitada pelo código à criação de uma branch
+`ocr-evidence-<execução>` com JSON e trechos finais dos logs técnicos.
+Os binários não são colocados no Git. A imagem `windows-2022` possui softwares
+pré-instalados; é uma VM nova do GitHub, não uma instalação mínima do Windows.
 
 Essa opção exige conta/repositório GitHub e disponibilidade de runners Windows,
 sujeita às permissões, políticas e limites da sua conta. Este kit não cria

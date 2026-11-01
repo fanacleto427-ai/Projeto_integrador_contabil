@@ -3,9 +3,56 @@
 ## Estado real
 
 **Não há runtime Windows aprovado ou binário Windows gerado neste repositório.**
-O ambiente de trabalho é Linux. O código permite incluir um runtime revisado,
-mas isso não comprova uma geração em Windows limpo. Não entregar o kit como
-uma distribuição pronta.
+O ambiente de trabalho é Linux. Há agora uma receita nativa de compilação dos
+fontes revisados, executada pelo GitHub Actions. A presença dessa receita não
+comprova uma geração em Windows. Não entregar o kit como distribuição pronta
+antes de obter os relatórios positivos da execução.
+
+## Caminho automatizado: compilar fontes revisados
+
+`build_ocr.py` baixa fontes upstream com versão e SHA-256 fixados, compila
+estaticamente e gera o inventário com textos integrais das licenças e avisos:
+
+| Componente | Versão | Licença |
+|---|---|---|
+| Tesseract | 5.5.0 | Apache-2.0 |
+| Leptonica | 1.85.0 | BSD-2-Clause |
+| libpng | 1.6.44 | libpng-2.0 |
+| zlib | 1.3.1 | Zlib |
+| tessdata_fast/por | 4.1.0 | Apache-2.0 |
+
+Essas licenças permitem distribuição binária com as condições descritas nos
+próprios textos: preservar origem, avisos, atribuições e disclaimers; incluir
+a licença Apache e NOTICE quando aplicável; identificar alterações de fontes.
+Os fontes não são alterados; apenas as opções de compilação são selecionadas.
+Os arquivos LICENSE/AUTHORS e `leptonica-license.txt` são copiados integralmente.
+Não foi encontrado NOTICE na raiz dos snapshots revisados; caso apareça, a
+receita bloqueia a geração até nova revisão.
+
+A compilação usa MSVC/CRT estático e somente suporte PNG/zlib em Leptonica.
+Não inclui ferramentas, testes, contrib do libpng, treino, OpenMP, curl,
+libarchive, JPEG, GIF, TIFF, WebP ou OpenJPEG. Os leitores continuam enviando
+ao pytesseract imagens PNG geradas pelo Pillow. Não se trata de um instalador
+genérico de Tesseract para todos os formatos de imagem.
+
+`dumpbin /DEPENDENTS` deve comprovar que o EXE depende apenas das bibliotecas
+de sistema Windows enumeradas na receita. Dependência extra, inclusive uma
+DLL de runtime C++, bloqueia o inventário e a distribuição.
+Os termos do compilador instalado também continuam aplicáveis:
+https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files
+
+O workflow faz isso automaticamente. Para gerar localmente, é preciso Windows
+x64, Visual Studio 2022 com C++ e CMake, além do Python/Tk usado pelo aplicativo:
+
+```bat
+py -3.13 windows\build_ocr.py --work-dir generated-artifacts\ocr-novo
+py -3.13 windows\build_windows.py --ocr-bundle generated-artifacts\ocr-novo\runtime
+```
+
+O diretório `--work-dir` deve ser novo; a receita não apaga compilações anteriores.
+Não há download de instaladores externos. Os hashes estão em `build_ocr.py`;
+alterar versões exige revisar também os textos legais, dependências e opções.
+Essa revisão é de origem/licença, não uma certificação de segurança ou acurácia.
 
 ## Fontes consultadas
 
@@ -25,10 +72,11 @@ uma distribuição pronta.
 
 Apache-2.0 exige fornecer a licença, preservar avisos aplicáveis e identificar
 modificações; preservar NOTICE quando houver. A consulta desses textos não
-constitui revisão das dependências de um instalador específico. Por isso o
-gerador **não baixa/executa um instalador nem redistribui DLLs automaticamente**.
+constitui revisão das dependências de um instalador específico. Por isso a
+receita automatizada compila a dependência mínima dos fontes, em vez de
+baixar/executar um instalador ou redistribuir suas DLLs.
 
-## Preparação pelo responsável pelo pacote
+## Alternativa: runtime externo preparado pelo responsável pelo pacote
 
 1. Obter um runtime Windows x64 de procedência conhecida e registrar versão,
    URL fixa, hashes publicados (quando disponíveis) e a receita/fonte da build.
