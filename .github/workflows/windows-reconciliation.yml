@@ -1,0 +1,55 @@
+name: Testes Windows de conciliação
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reconciliation:
+    name: Testes de conciliação e regras contábeis
+    runs-on: windows-2022
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - name: Buscar fonte privada do Bitbucket
+        shell: pwsh
+        env:
+          BITBUCKET_READ_TOKEN: ${{ secrets.BITBUCKET_READ_TOKEN }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ([string]::IsNullOrWhiteSpace($env:BITBUCKET_READ_TOKEN)) {
+            throw 'O segredo BITBUCKET_READ_TOKEN não foi encontrado no repositório GitHub.'
+          }
+          $sourceDir = Join-Path $env:RUNNER_TEMP 'importador-dominio-source'
+          $basic = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("x-token-auth:$($env:BITBUCKET_READ_TOKEN)"))
+          $env:GIT_CONFIG_COUNT = '1'
+          $env:GIT_CONFIG_KEY_0 = 'http.https://bitbucket.org/.extraheader'
+          $env:GIT_CONFIG_VALUE_0 = "Authorization: Basic $basic"
+          try {
+            git clone --depth 1 --branch Main https://bitbucket.org/lancador_dominio/lancador_dominio.git $sourceDir
+            if ($LASTEXITCODE -ne 0) { throw 'Falha ao obter a fonte privada do Bitbucket.' }
+            "SOURCE_DIR=$sourceDir" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          } finally {
+            Remove-Item Env:GIT_CONFIG_COUNT, Env:GIT_CONFIG_KEY_0, Env:GIT_CONFIG_VALUE_0 -ErrorAction SilentlyContinue
+            Remove-Variable basic -ErrorAction SilentlyContinue
+          }
+      - name: Selecionar Python 3.13 x64
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          architecture: x64
+      - name: Instalar dependências mínimas e fixadas
+        shell: pwsh
+        working-directory: ${{ env.SOURCE_DIR }}
+        run: python -m pip install --disable-pip-version-check --require-hashes -r ci/requirements-reconciliation.txt
+      - name: Executar testes de conciliação
+        shell: pwsh
+        working-directory: ${{ env.SOURCE_DIR }}
+        run: python -m unittest discover -s tests -p "test_reconciliation.py" -v
+      - name: Executar testes das regras contábeis
+        shell: pwsh
+        working-directory: ${{ env.SOURCE_DIR }}
+        run: python -m unittest discover -s tests -p "test_accounting_rules.py" -v
